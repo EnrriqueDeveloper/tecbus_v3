@@ -44,6 +44,6 @@ class RegisterController extends Controller
 
         //Redireccionar
 
-        return redirect()->route('dash');
+        return redirect()->route('posts.index');
     }
 }
