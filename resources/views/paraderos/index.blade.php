@@ -14,15 +14,13 @@
         width:30px;
     }
     .panel-body {
-        background-color: #080952;
+        background-color: #1D2C43;
         padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
         position: absolute;
-        width: 389px;
         bottom: 0;
         left: 0px;
         top: 90px;
+        overflow: hidden;
     }
     .nav-pills li {
         margin-bottom: 5px;
