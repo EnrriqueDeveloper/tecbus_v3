@@ -7,6 +7,12 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
+    span:not(.font-medium){
+        display:flex
+    }
+    svg{
+        width:30px;
+    }
     .panel-body {
         background-color: #080952;
         padding: 10px;
