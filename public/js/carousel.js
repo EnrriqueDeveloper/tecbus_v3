@@ -1,4 +1,7 @@
 // Initialization for ES Users
-import { Carousel, initTE } from "tw-elements";
-
-initTE({ Carousel });
+import {
+    Carousel,
+    initTE,
+  } from "tw-elements";
+  
+  initTE({ Carousel });
