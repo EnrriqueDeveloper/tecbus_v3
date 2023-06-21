@@ -59,6 +59,7 @@ class UsuarioController extends Controller
     public function edit(string $id)
     {
         $rol = Rol :: all();
+
         $data = array("lista_roles" => $rol);
         $usuario=Usuario::findOrFail($id);
         return view('usuarios.editar',compact('usuario'),$data);

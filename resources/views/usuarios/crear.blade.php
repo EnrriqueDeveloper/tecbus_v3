@@ -96,12 +96,13 @@
                         </div>
                         <div calss="grid grid-cols-1">
                             <label class="uppercase md:text-sm text-xs text-gary-500 text-light font-semibold">DNI</label>
-                            <input type="text" name="dni" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full" placeholder="dni">
+                            <input type="text" maxlength=8 name="dni" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full" placeholder="dni">
                         </div> 
                         <div calss="grid grid-cols-1">
                             <label class="uppercase md:text-sm text-xs text-gary-500 text-light font-semibold">Rol</label>
                             
                             <select name="rol" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full">
+                            <option value="">Seleccione el rol</option>
                             @foreach($lista_roles as $rol)
                             <option value="{{$rol->rol}}">{{$rol->rol}}</option>
                             @endforeach
