@@ -87,7 +87,7 @@
     }
 </style>
 <div class="panel-body">
-    <h1>NAVEGACION PRINCIPAL</h1>
+ <h1>NAVEGACION PRINCIPAL</h1>
     <br>
     <ul class="nav nav-pills nav-stacked">
         <li> <a href="/principal">Volver a página principal <i class="fas fa-home"></i></a></li>
