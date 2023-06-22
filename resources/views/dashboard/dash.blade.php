@@ -44,21 +44,21 @@
     .bienv img {
         padding-top: 10px;
         position: absolute;
-        height: 210px;
+        height: 310px;
         left: 388px;
         top: 90px;
-        width: 70%;
+        width: 83.5%;
         max-width: 100%;
     }
 
     .bienv iframe {
         padding-top: 10px;
         position: absolute;
-        height: 50%;
+        height: 60%;
         max-height: 100%;
         left: 388px;
         top: 298px;
-        width: 70%;
+        width: 83.5%;
         max-width: 100%;
 
     }
@@ -71,28 +71,17 @@
             left: initial;
         }
 
-        .bienv {
-            position: absolute;
-            width: 95%;
-            left: 5%;
-            top: initial;
-        }
 
-        .bienv img,
-        .bienv iframe {
-            width: 800px;
-            height: auto;
-        }
 
     }
 </style>
 <div class="panel-body">
- <h1>NAVEGACION PRINCIPAL</h1>
+ <h1 class="mt-6">NAVEGACION PRINCIPAL</h1>
     <br>
     <ul class="nav nav-pills nav-stacked">
-        <li> <a href="/principal">Volver a página principal <i class="fas fa-home"></i></a></li>
+        <li class="mt-4"> <a href="/principal">Volver a página principal <i class="fas fa-home"></i></a></li>
         <li> <a href="/buses">Registrar estado del bus <i class="fas fa-bus"></i></a></li>
-        <li><a href="/chofers">Registrar estado del chofer <i class="fas fa-user"></i></a></li>
+        <li ><a href="/chofers">Registrar estado del chofer <i class="fas fa-user"></i></a></li>
         <li><a href="/usuarios">Registrar cliente <i class="fas fa-address-card"></i></a></li>
         <li><a href="#">Asignar bus, ruta y horario <i class="fas fa-cogs"></i></a></li>
         <li><a href="/paraderos">Paraderos <i class="fas fa-bus"></i></a></li>
@@ -101,8 +90,8 @@
     </ul>
 </div>
 <div class="bienv">
-    <img src="img/bie.png">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1950.9952976425354!2d-76.95528060160524!3d-12.044167799999984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c68826cec0c3%3A0xf6df8bcd4e0a5fcf!2sTecsup%20-%20Santa%20Anita!5e0!3m2!1ses!2spe!4v1686078802226!5m2!1ses!2spe" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <img src="img/bie.png" class="ml-[-136px] mt-[-10px] ">
+    <iframe class="ml-[-136px] mt-[-9px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1950.9952976425354!2d-76.95528060160524!3d-12.044167799999984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c68826cec0c3%3A0xf6df8bcd4e0a5fcf!2sTecsup%20-%20Santa%20Anita!5e0!3m2!1ses!2spe!4v1686078802226!5m2!1ses!2spe" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 
 

@@ -61,8 +61,6 @@
                 </form>
             </nav>
             @endauth
-
-
         </div>
     </header>
 
