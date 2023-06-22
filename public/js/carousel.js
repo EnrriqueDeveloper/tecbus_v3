@@ -1,7 +1,5 @@
-// Initialization for ES Users
-import {
-    Carousel,
-    initTE,
-  } from "tw-elements";
-  
-  initTE({ Carousel });
+document.addEventListener("DOMContentLoaded", function () {
+  tw.initTE({
+    Carousel: tw.Carousel,
+  });
+});
