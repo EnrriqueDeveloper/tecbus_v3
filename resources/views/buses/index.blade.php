@@ -83,7 +83,7 @@
     </ul>
 </div>
 <div class="bienv">
-<div class="py-12">
+<div class="py-12 mt-[-12px] ml-[-170px] h-100">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <a type="button" href="{{ route('buses.create') }}" class="bg-indigo-600 px-12 py-2 rounded text-gray-200 font-semibold 

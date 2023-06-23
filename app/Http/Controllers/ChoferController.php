@@ -66,7 +66,7 @@ class ChoferController extends Controller
         $data2 = array("lista_conductores" => $conductor);
         $estado = Estado::all();
         $data = array("lista_estados" => $estado, "chofer" => $chofer);
-        return view('chofers.editar', $data + $data2);
+        return view('chofers.editar', $data,$data2);
     }
     
 
