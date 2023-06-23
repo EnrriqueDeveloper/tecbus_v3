@@ -12,7 +12,7 @@ Pagina Principal
 
     <div class="md:w-4/12 bg-white p-6 rounded-lg shadow-xl">
         <form method="POST" action="{{ route('login')}}" novalidate class="mt-10">
-            <h1 class="mb-2 block uppercase text-gray-500 font-bold text-center">¿ Ingresar como ?</h1>
+            <h1 class="mb-2 block uppercase text-gray-500 font-bold text-center">¿Ingresar como?</h1>
             <div class="mt-20 flex justify-center items-center">
                 <a href="{{ route('login-admin') }}" class="bg-sky-600 hover:bg-sky-700 transition-colors cursor-pointer uppercase font-bold w-80 p-3 text-white rounded-lg text-center block">
                     Administrador
