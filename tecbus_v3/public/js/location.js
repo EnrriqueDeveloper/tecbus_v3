@@ -127,15 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ];
 
         // Personalizar Ponto na mapa com imagem do Usuário.
-        const icon = L.divIcon({
-            className: "pointers",
-            iconAnchor: [0, 24],
-            labelAnchor: [-6, 0],
-            popupAnchor: [0, -36],
-            html: `<span style="${markerHtml}${myCustomColourUser}" />`
-        })
-        var newMarker = L.marker([coordUser[0], coordUser[1]], { icon }).addTo(map);
-
+        
         // Identifica a melhor rota para iniciar a viagem.
         L.Routing.control({
             waypoints: [
