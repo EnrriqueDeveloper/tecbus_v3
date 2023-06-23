@@ -101,6 +101,7 @@
                         <div class="grid grid-cols-1">
                             <label class="uppercase md:text-sm text-xs text-gray-500 font-semibold">Rol</label>
                             <select name="rol" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full">
+                            <option value="{{$usuario->rol}}">{{$usuario->rol}}</option>
                             @foreach($lista_roles as $rol)
                             <option value="{{$rol->rol}}">{{$rol->rol}}</option>
                             @endforeach

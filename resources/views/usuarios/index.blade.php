@@ -7,6 +7,13 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
+    
+    span:not(.font-medium){
+        display:flex
+    }
+    svg{
+        width:30px;
+    }
     .panel-body {
         background-color: #1D2C43;
         padding: 10px;
@@ -60,6 +67,15 @@
             top: initial;
         }
     }
+    .buscador-form{
+        display: flex;
+    }
+    .buscador-form div{
+        margin: 1em;
+    }
+    .buscador{
+        height
+    }
 </style>
 <div class="panel-body">
      <h1>NAVEGACION PRINCIPAL</h1>
@@ -80,6 +96,19 @@
 <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+            <div >
+                <form action="{{ route('usuarios.index') }}" method="get">
+                    <div class="buscador-form" >
+                        <div>
+                            <input type="text" name="nombre" value="{{$busqueda}}" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full">
+                        </div>
+                        <div>
+                            <input type="submit" value="Buscar Nombre" class="bg-indigo-600 px-12 py-2 rounded text-gray-200 font-semibold 
+                                                                                    hover:bg-indigo-800 duration-200 each-in-out height:6px">
+                        </div>
+                    </div>
+                </form>
+            </div>
                 <a type="button" href="{{ route('usuarios.create') }}" class="bg-indigo-600 px-12 py-2 rounded text-gray-200 font-semibold 
                                                                                     hover:bg-indigo-800 duration-200 each-in-out height:6px">Crear</a>
                 <table class="table-fixed w-full">

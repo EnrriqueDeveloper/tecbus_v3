@@ -7,6 +7,12 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
+    span:not(.font-medium){
+        display:flex
+    }
+    svg{
+        width:30px;
+    }
     .panel-body {
         background-color: #1D2C43;
         padding: 10px;
@@ -77,7 +83,7 @@
     </ul>
 </div>
 <div class="bienv">
-<div class="py-12">
+<div class="py-12 mt-[-12px] ml-[-170px] h-100">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <a type="button" href="{{ route('buses.create') }}" class="bg-indigo-600 px-12 py-2 rounded text-gray-200 font-semibold 
