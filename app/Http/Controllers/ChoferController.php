@@ -25,7 +25,7 @@ class ChoferController extends Controller
      */
     public function create()
     {
-        $conductor = Usuario::where('rol','Conductor')->whereNotIn('nombre','c')->get();
+        $conductor = Usuario::where('rol','Conductor')->get();
         $data2 = array("lista_conductores" => $conductor);
 
         $estado = Estado :: all();

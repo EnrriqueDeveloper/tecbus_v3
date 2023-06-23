@@ -72,7 +72,7 @@
         @yield('contenido')
     </main>
 
-    <footer class="mt-10 text-center p-5 text-gray-100 font-bold uppercase bg-black">
+    <footer class="mt-10 text-center p-5 text-gray-700 font-bold uppercase">
         Tecbus - Todos los derechos reservados @php echo date('Y') @endphp
     </footer>
 
