@@ -1,20 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Personalizar css no mapa
+    
     let myCustomColourUser = 'background-color: red;'
     const markerHtml = ``
 
-    // Coordenadas do Ponta A - Táxi
     const coordTaxi = [-12.029612777348195, -76.99903971112951];
-    // Coordenadas do Ponta B - Usuário
+
     const coordUser = [-12.053656427112138, -76.97550683793365];
 
-    // Iniciar o mapa com coordenadas do ponto A
+    
     const map = L.map('map').setView(coordTaxi, 40);
 
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
 
-
-    // Personalizar Ponto na mapa com imagem do táxi.
     const taxiIcon = L.icon({
         className: "taxi-pointers",
         iconUrl: '/img/bus.png',
@@ -23,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const marker = L.marker(coordTaxi, { icon: taxiIcon }).addTo(map);
 
     function startService() {
-        // Array de coordenadas. Simula o táxi enviando a localização para o APP.
+        
         const latlng = [
             { lat: -12.029612777348195, lng: -76.99903971112951 },
             { lat: -12.02954915359886, lng: -76.9988289417165 },
@@ -126,28 +123,15 @@ document.addEventListener('DOMContentLoaded', function () {
             { lat: -12.053656427112138, lng: -76.97550683793365 }
         ];
 
-        // Personalizar Ponto na mapa com imagem do Usuário.
-        const icon = L.divIcon({
-            className: "pointers",
-            iconAnchor: [0, 24],
-            labelAnchor: [-6, 0],
-            popupAnchor: [0, -36],
-            html: `<span style="${markerHtml}${myCustomColourUser}" />`
-        })
-        var newMarker = L.marker([coordUser[0], coordUser[1]], { icon }).addTo(map);
-
-        // Identifica a melhor rota para iniciar a viagem.
         L.Routing.control({
             waypoints: [
                 L.latLng(coordTaxi[0], coordTaxi[1]),
                 L.latLng(coordUser[0], coordUser[1])
             ]
         }).on('routesfound', function (e) {
-            // Loop de coordenadas. Simula o táxi enviando a localização para o APP.
             latlng.forEach(function (coord, index) {
                 setTimeout(function () {
                     marker.setLatLng([coord.lat, coord.lng]);
-                    // Identifica o final da viagem.
                     if (coord.lat === coordUser[0] && coord.lng === coordUser[1]) {
                         alert('El bus se encuentra en tu ruta!')
                     }
