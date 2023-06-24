@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts_admin.app')
 
 @section('titulo')
     Regístrate como administrador
