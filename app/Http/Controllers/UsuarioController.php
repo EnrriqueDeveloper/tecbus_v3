@@ -5,17 +5,23 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Usuario;
 use App\Models\Rol;
+use Illuminate\Support\Facades\DB;
 
 class UsuarioController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        
-        $usuarios = Usuario::paginate(5);
-        return view('usuarios.index', compact('usuarios'));
+        $busqueda = trim($request->get('nombre'));
+        $usuarios = DB::table('usuarios')
+                    ->select('id','nombre','apellidos','dni','rol')
+                    ->where('nombre','LIKE','%'.$busqueda.'%')
+                    ->orderBy('nombre','asc')
+                    ->paginate(5);
+
+        return view('usuarios.index', compact('usuarios','busqueda'));
     }
 
     /**
