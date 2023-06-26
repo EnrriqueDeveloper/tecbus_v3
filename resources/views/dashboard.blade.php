@@ -39,7 +39,7 @@ Tu Cuenta
             </div>
             <div class="bg-white p-6 rounded-lg shadow-xl ">
                 <div class="flex justify-center mt-2 ">
-                    {!! QrCode::size(200)->color(15, 184, 238)->generate('Tecbus'); !!}
+                    {!! QrCode::size(200)->color(15, 184, 238)->generate('Cliente Registrado'); !!}
                 </div>
                 <div class="flex justify-center mt-2 text-gray-700 text-2sm font-bold">
                     <p>Scanea el código Qr</p>
