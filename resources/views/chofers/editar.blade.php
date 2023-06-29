@@ -88,9 +88,9 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 mt-5 mx-7">
                         <div class="grid grid-cols-1">
                             <label class="uppercase md:text-sm text-xs text-gray-500 font-semibold">Nombre</label>
-                            <select name="nombre" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full">
+                            <select name="name" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full">
                             @foreach($lista_conductores as $conductor)
-                            <option value="{{$conductor->nombre}}">{{$conductor->nombre}}</option>
+                            <option value="{{$conductor->name}}">{{$conductor->name}}</option>
                             @endforeach
                             </select>
                         </div>   

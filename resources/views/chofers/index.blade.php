@@ -101,7 +101,7 @@
                         @foreach ($chofers as $chofer)
                         <tr>
                             <td style="text-align:center">{{ $chofer->id }}</td>
-                            <td style="text-align:center">{{ $chofer->nombre }}</td>
+                            <td style="text-align:center">{{ $chofer->name }}</td>
                             <td style="text-align:center">{{ $chofer->estado }}</td>
                             <td class="border px-4 py2">
                                 <div class="flex justify-center rounded-lg text-lg" role="group">

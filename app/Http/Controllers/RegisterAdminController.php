@@ -26,6 +26,8 @@ class RegisterAdminController extends Controller
         User::create([
             'name' => $request->name,
             'lastname' => Str::lower($request->lastname),
+            'dni' => Str::lower($request->dni),
+            'rol' => Str::lower($request->rol),
             'email' => $request->email,
             'password' => Hash::make( $request-> password)
 

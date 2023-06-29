@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Chofer extends Model
 {
     use HasFactory;
-    protected $fillable = ['nombre','estado'];
+    protected $fillable = ['name','estado'];
 
 }

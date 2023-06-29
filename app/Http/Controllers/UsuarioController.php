@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Usuario;
+use App\Models\User;
 use App\Models\Rol;
 use Illuminate\Support\Facades\DB;
 
@@ -14,12 +14,12 @@ class UsuarioController extends Controller
      */
     public function index(Request $request)
     {
-        $busqueda = trim($request->get('nombre'));
-        $usuarios = DB::table('usuarios')
-                    ->select('id','nombre','apellidos','dni','rol')
-                    ->where('nombre','LIKE','%'.$busqueda.'%')
-                    ->orderBy('nombre','asc')
-                    ->paginate(5);
+        $busqueda = trim($request->get('name'));
+        $usuarios = DB::table('Users')
+                    ->select('id','name','lastname','email','password','dni','rol')
+                    ->where('name','LIKE','%'.$busqueda.'%')
+                    ->orderBy('name','asc')
+                    ->paginate(9);
 
         return view('usuarios.index', compact('usuarios','busqueda'));
     }
@@ -42,12 +42,12 @@ class UsuarioController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nombre' => 'required', 'apellidos' => 'required','dni' => 'required','rol' => 'required'
+            'name' => 'required', 'lastname' => 'required','email' => 'required','password' => 'required','dni' => 'required','rol' => 'required'
         ]);
 
         $usuario = $request->all();
 
-        Usuario::create($usuario);
+        User::create($usuario);
         return redirect()->route('usuarios.index');
     }
 
@@ -67,7 +67,7 @@ class UsuarioController extends Controller
         $rol = Rol :: all();
 
         $data = array("lista_roles" => $rol);
-        $usuario=Usuario::findOrFail($id);
+        $usuario=User::findOrFail($id);
         return view('usuarios.editar',compact('usuario'),$data);
     }
 
@@ -76,10 +76,12 @@ class UsuarioController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $usuario = Usuario::findOrFail($id);
+        $usuario = User::findOrFail($id);
 
-        $usuario->nombre=$request->input('nombre');
-        $usuario->apellidos=$request->input('apellidos');
+        $usuario->name=$request->input('name');
+        $usuario->lastname=$request->input('lastname');
+        $usuario->email=$request->input('email');
+        $usuario->password=$request->input('password');
         $usuario->dni=$request->input('dni');
         $usuario->rol=$request->input('rol');
         $usuario->update();
@@ -89,7 +91,7 @@ class UsuarioController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Usuario $usuario)
+    public function destroy(User $usuario)
     {
         $usuario->delete();
         return redirect()->route('usuarios.index');

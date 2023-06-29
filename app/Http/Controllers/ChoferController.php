@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Chofer;
 use App\Models\Estado;
-use App\Models\Usuario;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
 
@@ -24,7 +24,7 @@ class ChoferController extends Controller
      */
     public function create()
     {
-        $conductor = Usuario::where('rol','Conductor')->get();
+        $conductor = User::where('rol','Conductor')->get();
         $data2 = array("lista_conductores" => $conductor);
 
         $estado = Estado :: all();
@@ -38,7 +38,7 @@ class ChoferController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nombre' => ['required',Rule::unique('chofers')], 'estado' => 'required'
+            'name' => ['required',Rule::unique('chofers')], 'estado' => 'required'
         ]);
 
         $chofer = $request->all();

@@ -13,15 +13,15 @@ return new class extends Migration
     {
         Schema::create('chofers', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
+            $table->string('name');
             $table->string('estado');
             $table->timestamps();
 
             $table->foreign('estado')->references('id')
                 ->on('estados');
 
-            $table->foreign('nombre')->references('id')
-                ->on('usuarios');
+            $table->foreign('name')->references('id')
+                ->on('Users');
         });
     }
 

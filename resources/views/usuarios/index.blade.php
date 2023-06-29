@@ -100,7 +100,7 @@
                 <form action="{{ route('usuarios.index') }}" method="get">
                     <div class="buscador-form" >
                         <div>
-                            <input type="text" name="nombre" value="{{$busqueda}}" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full">
+                            <input type="text" name="name" value="{{$busqueda}}" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full">
                         </div>
                         <div>
                             <input type="submit" value="Buscar Nombre" class="bg-indigo-600 px-12 py-2 rounded text-gray-200 font-semibold 
@@ -119,6 +119,8 @@
                             <th class="border px4 py-2">APELLIDOS</th>
                             <th class="border px4 py-2">DNI</th>
                             <th class="border px4 py-2">ROL</th>
+                            <th class="border px4 py-2">EMAIL</th>
+                            <th class="border px4 py-2">CONTRASEÑA</th>
                             <th class="border px4 py-2">ACCIONES</th>
                         </tr>
                     </thead>
@@ -126,10 +128,13 @@
                         @foreach ($usuarios as $usuario)
                         <tr>
                             <td style="text-align:center">{{ $usuario->id }}</td>
-                            <td style="text-align:center">{{ $usuario->nombre }}</td>
-                            <td style="text-align:center">{{ $usuario->apellidos }}</td>
+                            <td style="text-align:center">{{ $usuario->name }}</td>
+                            <td style="text-align:center">{{ $usuario->lastname }}</td>
                             <td style="text-align:center">{{ $usuario->dni }}</td>
                             <td style="text-align:center">{{ $usuario->rol }}</td>
+                            <td style="text-align:center">{{ $usuario->email }}</td>
+                            <td style="text-align:center">{{ $usuario->password }}</td>
+                            
 
                             <td class="border px-4 py2">
                                 <div class="flex justify-center rounded-lg text-lg" role="group">

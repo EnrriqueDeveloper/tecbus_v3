@@ -88,16 +88,26 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 mt-5 mx-7">
                         <div class="grid grid-cols-1">
                             <label class="uppercase md:text-sm text-xs text-gray-500 font-semibold">Nombre</label>
-                            <input type="text" name="nombre" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full" placeholder="Nombre" value="{{ $usuario->nombre }}">
+                            <input type="text" name="name" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full" placeholder="Nombre" value="{{ $usuario->name }}">
                         </div>   
                         <div class="grid grid-cols-1">
                             <label class="uppercase md:text-sm text-xs text-gray-500 font-semibold">Apellidos</label>
-                            <input type="text" name="apellidos" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full" placeholder="Apellidos" value="{{ $usuario->apellidos }}">
+                            <input type="text" name="lastname" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full" placeholder="Apellidos" value="{{ $usuario->lastname }}">
                         </div> 
                         <div class="grid grid-cols-1">
                             <label class="uppercase md:text-sm text-xs text-gray-500 font-semibold">DNI</label>
                             <input type="text" name="dni" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full" placeholder="DNI" value="{{ $usuario->dni }}">
                         </div> 
+                        <div class="mb-5">
+                    <label for="email" class="mb-2 block uppercase text-gray-500 font-bold">Correo</label>
+                    <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" 
+                    class="border p-3 w-full rounded-lg outline-none @error('email') border-red-500 @enderror"
+                    value="{{ $usuario->email }}">
+                </div>
+                <div class="mb-5">
+                    <label for="password_confirmation" class="mb-2 block uppercase text-gray-500 font-bold"> Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="contraseña" class="border p-3 w-full rounded-lg outline-none" value="{{ $usuario->password }}"/>
+                </div>
                         <div class="grid grid-cols-1">
                             <label class="uppercase md:text-sm text-xs text-gray-500 font-semibold">Rol</label>
                             <select name="rol" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full">

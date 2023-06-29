@@ -88,16 +88,24 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 mt-5 mx-7">
                         <div class="grid grid-cols-1">
                             <label class="uppercase md:text-sm text-xs text-gary-500 text-light font-semibold">Nombre</label>
-                            <input type="text" name="nombre" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full" placeholder="nombre">
+                            <input type="text" name="name" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full" placeholder="nombre">
                         </div>   
                         <div calss="grid grid-cols-1">
                             <label class="uppercase md:text-sm text-xs text-gary-500 text-light font-semibold">Apellidos</label>
-                            <input type="text" name="apellidos" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full" placeholder="apellidos">
+                            <input type="text" name="lastname" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full" placeholder="apellidos">
                         </div>
                         <div calss="grid grid-cols-1">
                             <label class="uppercase md:text-sm text-xs text-gary-500 text-light font-semibold">DNI</label>
                             <input type="text" maxlength=8 name="dni" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full" placeholder="dni">
-                        </div> 
+                        </div>
+                        <div class="mb-5">
+                    <label for="email" class="mb-2 block uppercase text-gray-500 font-bold">Correo</label>
+                    <input type="email" name="email" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full" placeholder="Ingresa tu correo electrónico">
+                </div>
+                <div class="mb-5">
+                    <label for="password_confirmation" class="mb-2 block uppercase text-gray-500 font-bold"> Contraseña</label>
+                    <input type="password" name="password" placeholder="contraseña" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full">
+                </div>
                         <div calss="grid grid-cols-1">
                             <label class="uppercase md:text-sm text-xs text-gary-500 text-light font-semibold">Rol</label>
                             
