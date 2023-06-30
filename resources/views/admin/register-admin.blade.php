@@ -47,6 +47,17 @@
                     @enderror
                 </div>
                 <div class="mb-5">
+                    <label for="dni" class="mb-2 block uppercase text-gray-500 font-bold">DNI</label>
+                    <input type="text" maxlength="8" id="dni" name="dni" placeholder="Ingresa tu DNI" 
+                    class="border p-3 w-full rounded-lg outline-none @error('lastname') border-red-500 @enderror"
+                    value="{{ old('dni') }}"
+                    >
+                    @error('dni')
+                        <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">
+                            {{ $message }}</p>
+                    @enderror
+                </div>
+                <div class="mb-5">
                     <label for="password" class="mb-2 block uppercase text-gray-500 font-bold">Contraseña</label>
                     <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" 
                     class="border p-3 w-full rounded-lg outline-none @error('password') border-red-500 @enderror"
