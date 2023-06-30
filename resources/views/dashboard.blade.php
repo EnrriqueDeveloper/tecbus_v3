@@ -2,7 +2,7 @@
 
 @section('titulo')
 
-Tu Cuenta
+Mi Perfil
 
 @endsection
 

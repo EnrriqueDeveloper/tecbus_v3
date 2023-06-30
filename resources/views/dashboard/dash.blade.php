@@ -77,7 +77,8 @@
 </style>
 <div class="panel-body">
     <div class="flex flex-col items-center justify-center">
-        <img src="{{ asset('img/admin.png') }}" alt="Imagen" class="mx-auto w-18 h-18">
+        <img src="{{ asset('img/admin.png') }}" alt="Imagen" class="mx-auto w-18 h-18 mt-2">
+        <h1 class="mt-3">Bienvenido Aministrador:</h1>
         <p class="text-gray-400 uppercase  text-sm mt-2">{{ auth()->user()->name }} {{ auth()->user()->lastname }}</p>
     </div>
     <br>
