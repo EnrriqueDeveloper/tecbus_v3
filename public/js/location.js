@@ -1,23 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
-    
-    let myCustomColourUser = 'background-color: red;'
-    const markerHtml = ``
 
-    const coordTaxi = [-12.029612777348195, -76.99903971112951];
-
+    const coordBus = [-12.029612777348195, -76.99903971112951];
     const coordUser = [-12.053656427112138, -76.97550683793365];
 
-    
-    const map = L.map('map').setView(coordTaxi, 40);
+
+
+    const map = L.map('map').setView(coordBus, 40);
 
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
 
-    const taxiIcon = L.icon({
-        className: "taxi-pointers",
+    const busIcon = L.icon({
+        className: "bus-pointers",
         iconUrl: '/img/bus.png',
         iconSize: [45, 45]
-    })
-    const marker = L.marker(coordTaxi, { icon: taxiIcon }).addTo(map);
+    });
+
+    const marker = L.marker(coordBus, { icon: busIcon }).addTo(map);
 
     function startService() {
         
@@ -122,10 +120,9 @@ document.addEventListener('DOMContentLoaded', function () {
             { lat: -12.05361445794292, lng: -76.97553366002337 },
             { lat: -12.053656427112138, lng: -76.97550683793365 }
         ];
-
         L.Routing.control({
             waypoints: [
-                L.latLng(coordTaxi[0], coordTaxi[1]),
+                L.latLng(coordBus[0], coordBus[1]),
                 L.latLng(coordUser[0], coordUser[1])
             ]
         }).on('routesfound', function (e) {
@@ -133,13 +130,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 setTimeout(function () {
                     marker.setLatLng([coord.lat, coord.lng]);
                     if (coord.lat === coordUser[0] && coord.lng === coordUser[1]) {
-                        alert('El bus se encuentra en tu ruta!')
+                        alert('El bus se encuentra en tu ruta!');
                     }
-                }, 1000 * index)
-            })
-
+                }, 1000 * index);
+            });
         }).addTo(map);
-    };
+    }
 
-    startService()
+    startService();
 });

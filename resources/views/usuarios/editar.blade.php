@@ -66,10 +66,10 @@
      <br>
     <ul class="nav nav-pills nav-stacked">
     <li> <a href="/dash">Volver a la pagina principal <i class="fas fa-home"></i></a></li>
-        <li> <a href="/buses">Registrar estado del bus <i class="fas fa-bus"></i></a></li>
-        <li><a href="/chofers">Registrar estado del chofer <i class="fas fa-user"></i></a></li>
+    <li> <a href="/dash">Pagina principal <i class="fas fa-home"></i></a></li>
+        <li> <a href="/buses">Estado del bus <i class="fas fa-bus"></i></a></li>
+        <li><a href="/chofers">Estado del chofer <i class="fas fa-user"></i></a></li>
         <li><a href="/usuarios">Registrar cliente <i class="fas fa-address-card"></i></a></li>
-        <li><a href="#">Asignar bus,ruta y horario <i class="fas fa-cogs"></i></a></li>
         <li><a href="/paraderos">Paraderos <i class="fas fa-bus"></i></a></li>
         <li><a href="/rutas">Rutas <i class="fas fa-map-signs"></i></a></li>
         <li><a href="/ruta_paraderos">Rutas con paraderos <i class="fas fa-route"></i></a></li>

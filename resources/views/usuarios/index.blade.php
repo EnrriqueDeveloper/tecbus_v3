@@ -49,8 +49,8 @@
         height: 210px;
         left: 388px;
         top: 90px;
-        width: 70%;
-        max-width: 100%;  
+        width: 100%;
+        max-width: 73%;  
     }
     @media (max-width: 767px) {
         .panel-body {
@@ -78,24 +78,28 @@
     }
 </style>
 <div class="panel-body">
-     <h1>NAVEGACION PRINCIPAL</h1>
-     <br>
+    <div class="flex flex-col items-center justify-center">
+    <img src="{{ asset('img/admin.png') }}" alt="Imagen" class="mx-auto w-18 h-18">
+        <p class="text-gray-400 uppercase  text-sm mt-2">{{ auth()->user()->name }} {{ auth()->user()->lastname }}</p>
+    </div>
+    <br>
+    <h1>NAVEGACION PRINCIPAL</h1>
+    <br>
     <ul class="nav nav-pills nav-stacked">
-    <li> <a href="/dash">Volver a pagina principal <i class="fas fa-home"></i></a></li>
-        <li> <a href="/buses">Registrar estado del bus <i class="fas fa-bus"></i></a></li>
-        <li><a href="/chofers">Registrar estado del chofer <i class="fas fa-user"></i></a></li>
+        <li> <a href="/dash">Pagina principal <i class="fas fa-home"></i></a></li>
+        <li> <a href="/buses">Estado del bus <i class="fas fa-bus"></i></a></li>
+        <li><a href="/chofers">Estado del chofer <i class="fas fa-user"></i></a></li>
         <li><a href="/usuarios">Registrar cliente <i class="fas fa-address-card"></i></a></li>
-        <li><a href="#">Asignar bus,ruta y horario <i class="fas fa-cogs"></i></a></li>
         <li><a href="/paraderos">Paraderos <i class="fas fa-bus"></i></a></li>
         <li><a href="/rutas">Rutas <i class="fas fa-map-signs"></i></a></li>
         <li><a href="/ruta_paraderos">Rutas con paraderos <i class="fas fa-route"></i></a></li>
-
     </ul>
 </div>
+
 <div class="bienv">
 <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+        <div class="max-w-20xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg ml-[-150px]">
             <div >
                 <form action="{{ route('usuarios.index') }}" method="get">
                     <div class="buscador-form" >
