@@ -43,10 +43,16 @@
                     </svg>
 
                 </a>
-                <a class="font-bold uppercase text-gray-700 text-sm bg-gray-20 border p-2 rounded
-            hover:text-sky-700 transition-colors cursor-pointer 'text-sky-700'" href="{{route('posts.index')}}">
-                    Hola: <span class="font-normal">{{auth()->user()->name}}</span>
+                <a class="font-bold uppercase text-gray-700 text-sm bg-gray-20 border p-2 rounded hover:text-sky-700 transition-colors cursor-pointer text-black" href="{{ route('posts.index') }}">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="user" class="inline-block w-5 h-5 mr-2">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <circle cx="128" cy="96" r="64" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="16"></circle>
+                        <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M30.989,215.99064a112.03731,112.03731,0,0,1,194.02311.002"></path>
+                    </svg>
+                    Hola: <span class="font-normal">{{ auth()->user()->name }}</span>
                 </a>
+
+
                 <form action="{{route('logout')}}" method="POST">
                     @csrf
                     <button type="submit" class="font-bold text-gray-700 text-xl flex items-center bg-gray-20 border p-2 rounded
