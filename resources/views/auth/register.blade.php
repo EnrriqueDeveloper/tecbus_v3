@@ -37,7 +37,7 @@
                 </div>
                 <div class="mb-5">
                     <label for="dni" class="mb-2 block uppercase text-gray-500 font-bold">DNI</label>
-                    <input type="text" id="dni" name="dni" placeholder="Ingresa tu DNI" 
+                    <input type="text" maxlength="8" id="dni" name="dni" placeholder="Ingresa tu DNI" 
                     class="border p-3 w-full rounded-lg outline-none @error('lastname') border-red-500 @enderror"
                     value="{{ old('dni') }}"
                     >
