@@ -47,7 +47,7 @@
         height: 310px;
         left: 388px;
         top: 90px;
-        width: 83.5%;
+        width: 86.5%;
         max-width: 100%;
     }
 
@@ -58,7 +58,7 @@
         max-height: 100%;
         left: 388px;
         top: 298px;
-        width: 83.5%;
+        width: 86.5%;
         max-width: 100%;
 
     }
@@ -95,8 +95,8 @@
     </ul>
 </div>
 <div class="bienv">
-    <img src="img/bie.png" class="ml-[-136px] mt-[-10px] ">
-    <iframe class="ml-[-136px] mt-[-9px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1950.9952976425354!2d-76.95528060160524!3d-12.044167799999984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c68826cec0c3%3A0xf6df8bcd4e0a5fcf!2sTecsup%20-%20Santa%20Anita!5e0!3m2!1ses!2spe!4v1686078802226!5m2!1ses!2spe" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <img src="img/bie.png" class="ml-[-182px] mt-[-10px] ">
+    <iframe class="ml-[-182px] mt-[-9px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1950.9952976425354!2d-76.95528060160524!3d-12.044167799999984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c68826cec0c3%3A0xf6df8bcd4e0a5fcf!2sTecsup%20-%20Santa%20Anita!5e0!3m2!1ses!2spe!4v1686078802226!5m2!1ses!2spe" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 
 

@@ -108,28 +108,21 @@
                                 @foreach($lista_paraderos as $paradero)
                                 <option value="{{$paradero->paradero}}">{{$paradero->n_paradero}}</option>
                                 @endforeach
-                            </select>
+                                </select>
                         </div>
                         <div class="grid grid-cols-1">
                             <label class="uppercase md:text-sm text-xs text-gray-500 font-semibold">Hora partida</label>
                             <input type="text" name="hora_partida" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full" placeholder="hora_partida">
                         </div>
                     </div>
+
+                    <div class="flex items-center justify-center h-20">
+                        <a type="button" href="{{ route('ruta_paraderos.index') }}" class="w-auto bg-indigo-600 hover:bg-indigo-400 rounded-lg shadow-x1 font-medium text-white px-4 py-2">Cancelar</a>
+                        <button type="submit" class="w-auto bg-indigo-600 hover:bg-purple-700 rounded-lg shadow-x1 font-medium text-white px-4 py-2 px-2">Guardar</button>
+                    </div>
                 </form>
             </div>
-
-
-
         </div>
-
-        <div class="flex items-center justify-center h-20">
-            <a type="button" href="{{ route('ruta_paraderos.index') }}" class="w-auto bg-indigo-600 hover:bg-indigo-400 rounded-lg shadow-x1 font-medium text-white px-4 py-2">Cancelar</a>
-            <button type="submit" class="w-auto bg-indigo-600 hover:bg-purple-700 rounded-lg shadow-x1 font-medium text-white px-4 py-2 px-2">Guardar</button>
-        </div>
-        <br>
-        </form>
     </div>
-</div>
-</div>
 </div>
 @endsection

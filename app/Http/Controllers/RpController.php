@@ -80,7 +80,7 @@ class RpController extends Controller
         $rutaparadero->num_ruta=$request->input('num_ruta');
         $rutaparadero->n_paradero=$request->input('n_paradero');
         $rutaparadero->hora_partida=$request->input('hora_partida');
-        $rutaparadero->update();
+        $rutaparadero->update($request->all());;
         return redirect()->route('ruta_paraderos.index');
     }
 
