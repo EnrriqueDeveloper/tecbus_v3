@@ -1,16 +1,16 @@
 @extends('layouts.app')
 
+@section('titulo')
+¿Quienes Somos?
+@endsection
+
 @section('contenido')
 <script src="{{ asset('js/alpine.js') }}"></script>
-<div class="container">
-    <h1 class="font-bold text-3xl text-center">¿QUIENES SOMOS?</h1>
-</div>
 <div class="w-full mt-3 flex justify-center">
   <div class="aspect-w-16 aspect-h-9 mx-auto overflow-hidden rounded-lg">
     <video src="{{ asset('video/tecbus.mp4') }}" autoplay controls class="w-full h-full sm:w-full"></video>
   </div>
 </div>
-
 <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 lg:gap-16 mt-7">
     <div class="bg-white rounded-lg overflow-hidden shadow-lg mb-6 sm:mb-0">
         <div class="flex items-center px-6 py-4">
