@@ -95,7 +95,7 @@
                 <form action="{{ route('chofers.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 mt-5 mx-7">
-                        <div calss="grid grid-cols-1">
+                        <div class="grid grid-cols-1">
                             <label class="uppercase md:text-sm text-xs text-gary-500 text-light font-semibold">Nombre</label>
                             <select name="name" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full">
                                 <option value="">Seleccione el conductor</option>

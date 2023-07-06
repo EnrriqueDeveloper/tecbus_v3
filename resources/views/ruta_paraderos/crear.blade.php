@@ -91,6 +91,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+
                 <form action="{{ route('ruta_paraderos.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 mt-5 mx-7">
@@ -98,7 +99,7 @@
                             <label class="uppercase md:text-sm text-xs text-gray-500 font-semibold">Num ruta</label>
                             <select name="num_ruta" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full">
                                 @foreach($lista_rutas as $ruta)
-                                <option value="{{$ruta->ruta}}">{{$ruta->num_ruta}}</option>
+                                <option value="{{$ruta->num_ruta}}">{{$ruta->num_ruta}}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -106,7 +107,7 @@
                             <label class="uppercase md:text-sm text-xs text-gray-500 font-semibold">Nom paraderos</label>
                             <select name="n_paradero" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full">
                                 @foreach($lista_paraderos as $paradero)
-                                <option value="{{$paradero->paradero}}">{{$paradero->n_paradero}}</option>
+                                <option value="{{$paradero->n_paradero}}">{{$paradero->n_paradero}}</option>
                                 @endforeach
                                 </select>
                         </div>

@@ -27,8 +27,11 @@ class RpController extends Controller
 
         $ruta = Ruta :: all();
         $data = array("lista_rutas" => $ruta);
+
+
         $paradero = Paradero :: all();
         $data2 = array("lista_paraderos" => $paradero);
+
         return view('ruta_paraderos.crear', $data,$data2);
 
     }

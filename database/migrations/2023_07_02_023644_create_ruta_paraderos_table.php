@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('num_ruta');
             $table->string('n_paradero');
+            $table->string('hora_partida');
             $table->timestamps();
 
             $table->foreign('num_ruta')->references('id')
@@ -22,6 +23,7 @@ return new class extends Migration
 
             $table->foreign('n_paradero')->references('id')
                 ->on('paraderos');
+            
         });
     }
 
