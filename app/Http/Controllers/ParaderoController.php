@@ -10,6 +10,18 @@ class ParaderoController extends Controller
     /**
      * Display a listing of the resource.
      */
+    public function mostrarParadero($id)
+    {
+        // Obtener el paradero de la base de datos
+        $paradero = Paradero::find($id);
+
+        // Asegurarse de que se encontró un paradero válido
+        if ($paradero) {
+            return view('mapa', compact('paradero'));
+        } else {
+            // Manejar el caso en el que no se encontró un paradero válido
+        }
+    }
     public function index()
     {
         $paraderos = Paradero::paginate(5);

@@ -49,6 +49,7 @@ Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 Route::get('/muro', [PostController::class, 'index'])->name('posts.index');
 Route::get('/location', [LocationController::class, 'index'])->name('location');
 Route::get('/mapa', [MapaController::class, 'index'])->name('mapa');
+
 Route::get('/inicio', [InicioController::class, 'index'])->name('inicio');
 Route::resource('/roles', RolController::class);
 Route::resource('/buses', BusController::class);
