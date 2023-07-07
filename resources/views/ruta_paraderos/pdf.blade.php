@@ -21,7 +21,7 @@
     <?php
      date_default_timezone_set('America/Lima');
      ?>
-    <h1 style="text-align: center">REPORTE RUTA PARADEROS</h1>
+    <h2 style="text-align: center">REPORTE RUTA PARADEROS</h2>
     <p class="text-right">Fecha: {{ date('Y-m-d') }}</p>
     <p class="text-right">Hora: {{ date('H:i:s') }}</p>
     <div>
