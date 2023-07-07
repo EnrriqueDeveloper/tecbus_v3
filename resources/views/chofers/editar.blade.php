@@ -98,6 +98,7 @@
                         <div class="grid grid-cols-1">
                             <label class="uppercase md:text-sm text-xs text-gray-500 font-semibold">Nombre</label>
                             <select name="name" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full">
+                                <option value="{{$chofer->name}}">{{$chofer->name}}</option>
                                 @foreach($lista_conductores as $conductor)
                                 <option value="{{$conductor->name}}">{{$conductor->name}}</option>
                                 @endforeach
@@ -106,6 +107,7 @@
                         <div class="grid grid-cols-1">
                             <label class="uppercase md:text-sm text-xs text-gray-500 font-semibold">Estado</label>
                             <select name="estado" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full">
+                                <option value="{{$chofer->estado}}">{{$chofer->estado}}</option>
                                 @foreach($lista_estados as $estado)
                                 <option value="{{$estado->estado}}">{{$estado->estado}}</option>
                                 @endforeach

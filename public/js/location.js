@@ -118,6 +118,26 @@ document.addEventListener('DOMContentLoaded', function () {
             { lat: -12.05361445794292, lng: -76.97553366002337 },
             { lat: -12.053656427112138, lng: -76.97550683793365 }
         ];
+        const messages = [
+            "Puente nuevo campus",
+            "Ctra. Panamericana Nte. 108, El Agustino 15007",
+            "Ctra. Panamericana Nte. 108, El Agustino 15007",
+            "Ctra. Panamericana Nte. 108, El Agustino 15007",
+            "Ctra. Panamericana Nte. 108, El Agustino 15007",
+            "Ctra. Panamericana Nte. 108, El Agustino 15007",
+            "Ctra. Panamericana Nte. 108, El Agustino 15007",
+            "Ctra. Panamericana Nte. 108, El Agustino 15007",
+            "Ctra. Panamericana Nte. 108, El Agustino 15007",
+            "Ctra. Panamericana Nte., El Agustino 15007",
+            "Ctra. Panamericana Nte., El Agustino 15007",
+            "Ctra. Panamericana Nte., El Agustino 15007",
+            "Ctra. Panamericana Nte., El Agustino 15007",
+            "Ctra. Panamericana Nte., El Agustino 15007",
+            "Ctra. Panamericana Nte., El Agustino 15007",
+            "Ctra. Panamericana Nte., El Agustino 15007",
+            "Asoc Programa 4 Sector 1, El Agustino"
+        ];
+
         L.Routing.control({
             waypoints: [
                 L.latLng(coordBus[0], coordBus[1]),
@@ -128,14 +148,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
             latlng.forEach(function (coord, index) {
                 const routeMarker = L.marker(coord).addTo(map);
-                routeMarker.bindPopup("¡Este es un punto de ruta del bus!");  // Agrega un mensaje emergente al punto de ruta
+                routeMarker.bindPopup(messages[index]); // Asigna el mensaje correspondiente al índice del bucle
 
                 setTimeout(function () {
                     marker.setLatLng(coord);
                     if (coord.lat === coordUser[0] && coord.lng === coordUser[1]) {
                         alert('El bus se encuentra en tu ruta!');
                     }
-                }, 4000 * index);  // Detiene el bus durante 5 segundos (5000 milisegundos)
+                }, 5000 * index);  // Detiene el bus durante 4 segundos (4000 milisegundos)
             });
         }).addTo(map);
     }
