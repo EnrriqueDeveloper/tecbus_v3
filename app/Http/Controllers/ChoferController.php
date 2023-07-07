@@ -76,7 +76,7 @@ class ChoferController extends Controller
     {
         $chofer = Chofer::findOrFail($id);
 
-        $chofer->nombre=$request->input('nombre');
+        $chofer->name=$request->input('name');
         $chofer->estado=$request->input('estado');
         $chofer->update();
         return redirect()->route('chofers.index');
