@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     const marker = L.marker(coordBus, { icon: busIcon }).addTo(map);
-
+    marker.bindPopup("¡Este es el punto de inicio!");  // Agrega un mensaje emergente al punto de inicio
     function startService() {
         
         const latlng = [
@@ -26,8 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
             { lat: -12.029320107999217, lng: -76.99804050804615 },
             { lat: -12.029271753900458, lng: -76.99789479092067 },
             { lat: -12.029187770449939, lng: -76.99757213159684 },
-            { lat: -12.029172500728842, lng: -76.9973821789304 },
-            { lat: -12.029159775960597, lng: -76.9970777342458 },
             { lat: -12.02918777045088, lng: -76.99675247281459 },
             { lat: -12.029203040171112, lng: -76.9965573159655 },
             { lat: -12.029274298854046, lng: -76.9963491486598 },
@@ -126,16 +124,22 @@ document.addEventListener('DOMContentLoaded', function () {
                 L.latLng(coordUser[0], coordUser[1])
             ]
         }).on('routesfound', function (e) {
+            const latlng = e.routes[0].coordinates;
+
             latlng.forEach(function (coord, index) {
+                const routeMarker = L.marker(coord).addTo(map);
+                routeMarker.bindPopup("¡Este es un punto de ruta del bus!");  // Agrega un mensaje emergente al punto de ruta
+
                 setTimeout(function () {
-                    marker.setLatLng([coord.lat, coord.lng]);
+                    marker.setLatLng(coord);
                     if (coord.lat === coordUser[0] && coord.lng === coordUser[1]) {
                         alert('El bus se encuentra en tu ruta!');
                     }
-                }, 1000 * index);
+                }, 4000 * index);  // Detiene el bus durante 5 segundos (5000 milisegundos)
             });
         }).addTo(map);
     }
 
+    // Llama a la función startService para iniciar el servicio
     startService();
 });

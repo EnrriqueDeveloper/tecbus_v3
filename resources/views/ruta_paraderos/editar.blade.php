@@ -110,14 +110,14 @@
                         <select name="n_paradero" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full">
                             <option value="{{$rutaparadero->n_paradero}}">{{$rutaparadero->n_paradero}}</option>        
                             @foreach($lista_paraderos as $paradero)
-                            <option value="{{$paradero->n_paradero}}">{{$paradero->n_paradero}}</option>
+                            <option value="{{ $paradero->n_paradero }}">{{ $paradero->n_paradero }}</option>
                             @endforeach
                         </select>
                     </div>
             </div>
             <div class="grid grid-cols-1">
                 <label class="uppercase md:text-sm text-xs text-gray-500 font-semibold">Hora partida</label>
-                <input type="text" name="hora_partida" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full" placeholder="hora_partida" value="{{ $rutaparadero->hora_partida}}">
+                <input type="text" name="hora_partida" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full" placeholder="hora_partida" value="{{ $rutaparadero->hora_partida }}">
             </div>
 
         </div>

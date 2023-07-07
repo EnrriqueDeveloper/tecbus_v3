@@ -29,7 +29,7 @@
         @foreach ($paraderos as $index => $paradero)
             <div class="flex flex-col items-center mx-10 bg-white rounded-lg overflow-hidden">
                 <img src="{{ asset('img/card' . ($index + 1) . '.png') }}" alt="">
-                <p class="text-justify">Nombre de paradero: {{ $paradero->n_paradero }}</p>
+                <p class="text-justify font-bold">{{ $paradero->n_paradero }}</p>
                 <p class="text-justify">Hora estimada: {{ $paradero->hora_estimada }}</p>
             </div>
             @if (($index + 1) % 3 === 0)

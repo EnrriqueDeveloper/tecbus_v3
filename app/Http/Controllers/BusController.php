@@ -76,7 +76,9 @@ class BusController extends Controller
         $bus->update();
         return redirect()->route('buses.index');
     }
-
+    public function pdf(){
+        return view('pdf');
+    }
     /**
      * Remove the specified resource from storage.
      */
