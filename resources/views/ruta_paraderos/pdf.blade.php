@@ -15,7 +15,7 @@
     <img src="{{ public_path('img/logo2.png') }}" alt="Imagen aquí">
     <div>
         <h3 class="text-right">Reporte actualizado del 2023</h3>
-        <p class="text-right">Fecha: {{ date('Y-m-d') }}</p>
+        <p class="text-right">Fecha: {{ date('d-m-Y') }}</p>
         <p class="text-right">Hora: {{ date('H:i:s') }}</p>
     </div>
 </nav>
