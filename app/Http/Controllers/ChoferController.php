@@ -61,7 +61,7 @@ class ChoferController extends Controller
     public function edit(string $id)
     {
         $chofer = Chofer::findOrFail($id);
-        $conductor = Usuario::where('rol','Conductor')->get();
+        $conductor = User::where('rol','Conductor')->get();
         $data2 = array("lista_conductores" => $conductor);
         $estado = Estado::all();
         $data = array("lista_estados" => $estado, "chofer" => $chofer);
@@ -76,7 +76,7 @@ class ChoferController extends Controller
     {
         $chofer = Chofer::findOrFail($id);
 
-        $chofer->nombre=$request->input('nombre');
+        $chofer->name=$request->input('name');
         $chofer->estado=$request->input('estado');
         $chofer->update();
         return redirect()->route('chofers.index');

@@ -98,8 +98,9 @@
                         <div class="grid grid-cols-1">
                             <label class="uppercase md:text-sm text-xs text-gray-500 font-semibold">Num ruta</label>
                             <select name="num_ruta" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full">
+                                <option value="{{$rutaparadero->num_ruta}}">{{$rutaparadero->num_ruta}}</option>
                                 @foreach($lista_rutas as $ruta)
-                                <option value="{{$ruta->ruta}}">{{$ruta->ruta}}</option>
+                                <option value="{{$ruta->num_ruta}}">{{$ruta->num_ruta}}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -107,8 +108,9 @@
                     <div class="grid grid-cols-1">
                         <label class="uppercase md:text-sm text-xs text-gray-500 font-semibold">Nombre paraderos</label>
                         <select name="n_paradero" class="py-2 px-3 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:purple-600 w-full">
+                            <option value="{{$rutaparadero->n_paradero}}">{{$rutaparadero->n_paradero}}</option>        
                             @foreach($lista_paraderos as $paradero)
-                            <option value="{{$paradero->paradero}}">{{$paradero->paradero}}</option>
+                            <option value="{{$paradero->n_paradero}}">{{$paradero->n_paradero}}</option>
                             @endforeach
                         </select>
                     </div>
