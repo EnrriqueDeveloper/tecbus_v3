@@ -11,7 +11,7 @@
 
     <style>
         .date-time-container {
-            margin-top: -30px;
+            margin-top: -40px;
         }
 
         .date-time-container p {
@@ -26,6 +26,9 @@
         <img src="img/admin.png" alt="" width="50px" height="50px">
         <div class="d-flex justify-content-end date-time-container">
             <div class="text-end">
+            <?php
+                date_default_timezone_set('America/Lima');
+                ?>
                 <p class="text-end">Fecha: {{ date('Y-m-d') }}</p>
                 <p class="text-end">Hora: {{ date('H:i:s') }}</p>
             </div>
