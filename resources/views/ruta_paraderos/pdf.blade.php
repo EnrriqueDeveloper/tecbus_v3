@@ -12,7 +12,6 @@
 </head>
 
 <body>
-<<<<<<< HEAD
     <div class="flex">
         <div>
             <img src="img/admin.png" alt="" width="50px" height="50px">
@@ -45,41 +44,6 @@
             </tr>
             @endforeach
         </tbody>    </table>
-=======
-<nav class="flex gap-2 items-center">
-    <img src="{{ public_path('img/logo2.png') }}" alt="Imagen aquí">
-    <div>
-        <h3 class="text-right">Reporte actualizado del 2023</h3>
-        <p class="text-right">Fecha: {{ date('Y-m-d') }}</p>
-        <p class="text-right">Hora: {{ date('H:i:s') }}</p>
-    </div>
-</nav>
-
-
-
-<table class="table-fixed w-full">
-                    <thead>
-                        <tr class="bg-gray-300 text-white">
-                            <th class="border px4 py-2">ID</th>
-                            <th class="border px4 py-2">NUM RUTA</th>
-                            <th class="border px4 py-2">PARADEROS</th>
-                            <th class="border px4 py-2">HORA PARTIDA</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($ruta_paraderos as $rutaparadero)
-                        <tr>
-                            <td style="text-align:center">{{ $rutaparadero->id }}</td>
-                            <td style="text-align:center">{{ $rutaparadero->num_ruta }}</td>
-                            <td style="text-align:center">{{ $rutaparadero->n_paradero }}</td>
-                            <td style="text-align:center">{{ $rutaparadero->hora_partida }}</td>
-
-                        </tr>
-                    </tbody>
-                    @endforeach
-                </table>
->>>>>>> 357e36e0d5eb0d05d8263cfd925054976ed9bce4
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-c9X5d40GlpO2JJT/7hxBmvR66zx8ghWED4Ts9WvS0x0abJQSmHepn2rUoTme3Q3y"
     crossorigin="anonymous"></script>
