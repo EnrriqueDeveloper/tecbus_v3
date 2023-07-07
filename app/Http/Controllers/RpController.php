@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Paradero;
 use App\Models\Ruta;
 use App\Models\RutaParadero;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class RpController extends Controller
 {
@@ -64,13 +65,12 @@ class RpController extends Controller
      */
     public function edit(string $id)
     {
-
-        $rutaparadero=RutaParadero::findOrFail($id);        
+        $rutaparadero = RutaParadero::findOrFail($id);        
         $ruta = Ruta :: all();
         $data = array("lista_rutas" => $ruta);
         $paradero = Paradero :: all();
         $data2 = array("lista_paraderos" => $paradero);
-        return view('ruta_paraderos.editar',compact('ruta_paraderos'),$data,$data2);
+        return view('ruta_paraderos.editar',compact('rutaparadero'),$data,$data2);
     }
 
     /**
@@ -86,7 +86,11 @@ class RpController extends Controller
         $rutaparadero->update($request->all());;
         return redirect()->route('ruta_paraderos.index');
     }
-
+    public function pdf(){
+        $ruta_paraderos = RutaParadero::all();
+        $pdf = Pdf::loadView('ruta_paraderos.pdf' , compact('ruta_paraderos'));
+        return $pdf->stream();
+    }
     /**
      * Remove the specified resource from storage.
      */

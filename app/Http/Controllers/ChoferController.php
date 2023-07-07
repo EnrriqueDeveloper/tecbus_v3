@@ -61,7 +61,7 @@ class ChoferController extends Controller
     public function edit(string $id)
     {
         $chofer = Chofer::findOrFail($id);
-        $conductor = Usuario::where('rol','Conductor')->get();
+        $conductor = User::where('rol','Conductor')->get();
         $data2 = array("lista_conductores" => $conductor);
         $estado = Estado::all();
         $data = array("lista_estados" => $estado, "chofer" => $chofer);

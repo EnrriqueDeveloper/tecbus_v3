@@ -50,6 +50,8 @@ Route::get('/muro', [PostController::class, 'index'])->name('posts.index');
 Route::get('/location', [LocationController::class, 'index'])->name('location');
 Route::get('/mapa', [MapaController::class, 'index'])->name('mapa');
 
+Route::get('/ruta_paraderos/pdf', [RpController::class, 'pdf'])->name('ruta_paraderos.pdf');
+//pdf
 Route::get('/inicio', [InicioController::class, 'index'])->name('inicio');
 Route::resource('/roles', RolController::class);
 Route::resource('/buses', BusController::class);
@@ -59,5 +61,7 @@ Route::resource('/rutas', RutasController::class);
 Route::resource('/ruta_paraderos', RpController::class);
 Route::resource('/usuarios', UsuarioController::class);
 //Ruta para perfil
+
+
 Route::get('/{user}/editar-perfil', [PerfilController::class, 'index'])->name('perfil.index');
 Route::post('{user:name}/editar-perfil', [PerfilController::class, 'store'])->name('perfil.store');

@@ -12,7 +12,7 @@ Mi Perfil
     <div class="w-full md:w-8/12 lg:w-6/12 md:flex flex-col items-center ">
         <div class="md:w-8/12 lg:w-6/12 px-5">
             <div class="flex justify-center">
-                <img src="{{ asset('img/user1.svg') }}" alt="Imagen aquí">
+                <img src="{{ asset('img/user1.png') }}" alt="Imagen aquí">
             </div>
             @if(auth()->user()->id == auth()->user()->id)
             <div class="flex justify-center mt-2 uppercase">

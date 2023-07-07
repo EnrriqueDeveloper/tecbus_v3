@@ -99,6 +99,9 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <a type="button" href="{{ route('ruta_paraderos.create') }}" class="bg-indigo-600 px-12 py-2 rounded text-gray-200 font-semibold 
                                                                                     hover:bg-indigo-800 duration-200 each-in-out height:6px">Crear</a>
+                 <!-- boton reporte -->
+                <a href="{{ route('ruta_paraderos.pdf') }}" class="bg-gray-900 hover:bg-gray-400 rounded text-white font-bold py-2 px-4">Reporte</a>
+                                       <td class="border px-4 py2">
                 <table class="table-fixed w-full">
                     <thead>
                         <tr class="bg-gray-300 text-white">
