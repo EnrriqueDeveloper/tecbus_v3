@@ -71,7 +71,7 @@
     <h1>NAVEGACION PRINCIPAL</h1>
     <br>
     <ul class="nav nav-pills nav-stacked">
-    <li> <a href="/dash">Pagina principal <i class="fas fa-home"></i></a></li>
+        <li> <a href="/dash">Pagina principal <i class="fas fa-home"></i></a></li>
         <li> <a href="/buses">Estado del bus <i class="fas fa-bus"></i></a></li>
         <li><a href="/chofers">Estado del chofer <i class="fas fa-user"></i></a></li>
         <li><a href="/usuarios">Registrar cliente <i class="fas fa-address-card"></i></a></li>
